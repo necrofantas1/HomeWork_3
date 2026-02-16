@@ -2,9 +2,9 @@
 
 public class StorageUnit<T> where T : class , new()
 {
-    private List<T> items;
+    private List<T> _items = new List<T>();
     
-    public void Add(T item) => items.Add(item);
+    public void AddItem(T item) => _items.Add(item);
     
-    public T GetItem(int index) => items[index];
+    public T GetItem(int index) => _items[index];
 }
